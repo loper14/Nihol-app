@@ -1,0 +1,16 @@
+export let ru = {
+  home_title: "Разделы",
+  "All Users": "Все пользователи",
+  "Half Time": "Половина времени",
+  "Time Up": "Срок окончания",
+  "Empty Places": "Пустые места",
+  reports: "Отчеты",
+  report: "Отчет",
+  building_types: "Типы зданий",
+  "Ordinary Room": "Обычные комнат",
+  "Luxury Room": "Люкс комнат",
+  Cottages: "Коттеджи",
+  settings: "Настройки",
+  change_language: "Изменить язык",
+  log_out: "Выйти",
+};

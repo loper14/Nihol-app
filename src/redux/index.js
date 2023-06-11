@@ -1,8 +1,10 @@
 import { configureStore } from "@reduxjs/toolkit";
-import Slice1 from "./slice";
+import modalSlice from "./modalSlices";
+import localeSlice from "./localeSlice";
 
 export default configureStore({
   reducer: {
-    modal: Slice1,
+    modal: modalSlice,
+    locale: localeSlice,
   },
 });

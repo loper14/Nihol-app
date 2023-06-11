@@ -1,18 +1,18 @@
 import { useDispatch, useSelector } from "react-redux";
-import { setOpenModal } from "../../../redux/slice";
 import { Avatar, Input, Modal } from "antd";
 import { SettingText, VersionText } from "./style";
+import { switchProfileModal } from "../../../redux/modalSlices";
 
 const SettingModal = () => {
   let dispatch = useDispatch();
-  let { openModal } = useSelector((state) => state.modal);
+  let { profileModalVisibility } = useSelector((state) => state.modal);
 
   return (
     <Modal
       title="Profile"
-      open={openModal}
-      onOk={() => dispatch(setOpenModal(false))}
-      onCancel={() => dispatch(setOpenModal(false))}
+      open={profileModalVisibility}
+      onOk={() => dispatch(switchProfileModal())}
+      onCancel={() => dispatch(switchProfileModal())}
       okButtonProps={{ disabled: true }}
     >
       <Avatar

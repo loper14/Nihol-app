@@ -3,22 +3,33 @@ import { Wrapper } from "./style";
 import Card from "../../generic/card";
 import { cardData } from "../../mock/cardData";
 import { Title } from "../../generic/style/style";
-import { DatabaseOutlined } from "@ant-design/icons";
+import { useNavigate } from "react-router-dom";
+import report from "../../assets/imgs/report.svg";
+import TitleHandler from "../../generic/Title";
+import { useTranslation } from "react-i18next";
 
 const Home = () => {
+  let navigate = useNavigate();
+  let { t } = useTranslation();
   return (
     <>
-      <Title>Sections</Title>
+      <TitleHandler title={t("home_title")} showBackIcon={false} />
       <Wrapper>
         {cardData.map((value, index) => (
-          <Card title={value.title} icon={value.icon} key={index} />
+          <Card
+            title={t(value.title)}
+            icon={value.icon}
+            key={index}
+            onClick={() => navigate(value.path)}
+          />
         ))}
       </Wrapper>
-      <Title>Reports</Title>
+      <Title>{t("reports")}</Title>
       <Wrapper isReportCard={true}>
         <Card
-          title="Report"
-          icon={<DatabaseOutlined style={{ fontSize: "105px" }} />}
+          title={t("report")}
+          icon={report}
+          onClick={() => navigate("/report")}
         />
       </Wrapper>
     </>

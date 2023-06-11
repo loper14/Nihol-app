@@ -4,41 +4,30 @@ import { Dropdown } from "antd";
 import { useDropDownAPI } from "../../generic/dropDownAPI";
 import SettingModal from "./settingModal";
 import LanguageModal from "./languageModal";
-import { Modal } from "antd";
-import { useSelector } from "react-redux";
-import { useNavigate } from "react-router-dom";
-import { useSignOut } from "react-auth-kit";
-import { ExclamationCircleFilled } from "@ant-design/icons";
-import LogoutModal from "./logoutModal";
-let { confirm } = Modal;
+import { useDispatch } from "react-redux";
+import { switchLocaleModal, switchProfileModal } from "../../redux/modalSlices";
+import { Outlet, useNavigate } from "react-router-dom";
 
 const Navbar = () => {
   let { navbarDropDown } = useDropDownAPI();
-  // let { isLogout } = useSelector((state) => state.modal);
-  // let navigate = useNavigate();
-  // let signOut = useSignOut();
-
-  // isLogout &&
-  //   confirm({
-  //     title: "Do you Want to delete these items?",
-  //     icon: <ExclamationCircleFilled />,
-  //     content: "Some descriptions",
-  //     onOk() {
-  //       signOut();
-  //       navigate("/login");
-  //     },
-  //   });
-
+  let dispatch = useDispatch();
+  let navigate = useNavigate();
   return (
     <>
-      <LogoutModal />
       <SettingModal />
       <LanguageModal />
       <Wrapper>
-        <Wrapper.Title>NIHOL</Wrapper.Title>
+        <Wrapper.Title onClick={() => navigate("/")}>NIHOL</Wrapper.Title>
         <Dropdown
           menu={{
-            items: navbarDropDown,
+            items: navbarDropDown({
+              profileClickHandler: () => {
+                dispatch(switchProfileModal());
+              },
+              localeClickHandler: () => {
+                dispatch(switchLocaleModal());
+              },
+            }),
           }}
           trigger={["click"]}
         >
@@ -52,7 +41,7 @@ const Navbar = () => {
           </Wrapper.Avatar>
         </Dropdown>
       </Wrapper>
-      <Home />
+      <Outlet />
     </>
   );
 };

@@ -11,7 +11,7 @@ let notifier = (status) => {
         message: "User not found!",
       });
     case "empty":
-      return notification.error({
+      return notification.warning({
         message: "Please fill all the fields!",
       });
     default:

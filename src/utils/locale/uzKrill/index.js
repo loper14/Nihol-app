@@ -1,0 +1,16 @@
+export let uzKrill = {
+  home_title: "Бўлимлар",
+  "All Users": "Барча мижозлар",
+  "Half Time": "Оралиқ муддат",
+  "Time Up": "Муддат тугаш",
+  "Empty Places": "Мавжуд жойлар",
+  reports: "Ҳисоботлар",
+  report: "Ҳисобот",
+  building_types: "Бино турлари",
+  "Ordinary Room": "Оддий хоналар",
+  "Luxury Room": "Ҳашаматли хоналар",
+  Cottages: "Коттежлар",
+  settings: "Созламалар",
+  change_language: "Тилни ўзгартириш",
+  log_out: "Тарк этиш",
+};
