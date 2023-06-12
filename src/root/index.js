@@ -21,7 +21,7 @@ const Root = () => {
       uzLotin: { translation: uzLotin },
     },
     lang,
-    fallbackLng: lang,
+    fallbackLng: lang, // when something went wrong
   });
   return (
     <Routes>
