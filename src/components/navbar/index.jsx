@@ -17,7 +17,13 @@ const Navbar = () => {
       <SettingModal />
       <LanguageModal />
       <Wrapper>
-        <Wrapper.Title onClick={() => navigate("/")}>NIHOL</Wrapper.Title>
+        <Wrapper.Logo>
+          <Wrapper.Img
+            src="https://smhospital.org.in/wp-content/uploads/2023/01/SM-Hospital-Logo-Symbol-1.svg"
+            alt="ddd"
+          />
+          <Wrapper.Title onClick={() => navigate("/")}>NIHOL</Wrapper.Title>
+        </Wrapper.Logo>
         <Dropdown
           menu={{
             items: navbarDropDown({

@@ -13,6 +13,9 @@ export let Title = styled.div`
   line-height: 77px;
   color: rgb(0, 0, 0);
   margin: 40px 0;
+  @media (max-width: 470px) {
+    font-size: 30px;
+  }
 `;
 export let DropDownItem = styled.div`
   display: flex;

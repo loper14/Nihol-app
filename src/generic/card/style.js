@@ -12,6 +12,16 @@ export let Wrapper = styled.div`
   align-items: center;
   gap: 0px;
   box-shadow: rgba(0, 0, 0, 0.25) 6px 6px 7px;
+  @media (max-width: 700px) {
+    width: 230px;
+    height: 230px;
+  }
+  @media (max-width: 600px) {
+    width: 430px;
+  }
+  @media (max-width: 470px) {
+    width: 270px;
+  }
 `;
 
 Wrapper.Title = styled.div`
@@ -25,4 +35,12 @@ Wrapper.Title = styled.div`
 Wrapper.Img = styled.img`
   width: 133px;
   height: 192px;
+  @media (max-width: 700px) {
+    width: 100px;
+    height: 160px;
+  }
+  @media (max-width: 600px) {
+    width: 123px;
+    height: 182px;
+  }
 `;

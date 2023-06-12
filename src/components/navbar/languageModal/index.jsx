@@ -3,7 +3,7 @@ import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { switchLocaleModal } from "../../../redux/modalSlices";
 import { Wrapper } from "./style";
-import i18next, { changeLanguage } from "i18next";
+import i18next from "i18next";
 import { changeLang } from "../../../redux/localeSlice";
 import { useTranslation } from "react-i18next";
 
