@@ -13,4 +13,12 @@ export let en = {
   settings: "Settings",
   change_language: "Change language",
   log_out: "Log out",
+  ordinary_rooms_title: "Ordinary Rooms",
+  "2 Building": "2 Building",
+  "4 Building": "4 Building",
+  "6 Building": "6 Building",
+  setting_modal_title: "Profile",
+  setting_modal_name: "Name:",
+  setting_modal_surname: "Surname:",
+  locale_modal_title: "Change Language",
 };

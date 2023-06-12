@@ -13,4 +13,12 @@ export let ru = {
   settings: "Настройки",
   change_language: "Изменить язык",
   log_out: "Выйти",
+  ordinary_rooms_title: "Обычные комнат",
+  "2 Building": "2 Здание",
+  "4 Building": "4 Здание",
+  "6 Building": "6 Здание",
+  setting_modal_title: "Профиль",
+  setting_modal_name: "Имя:",
+  setting_modal_surname: "Фамилия:",
+  locale_modal_title: "Изменить язык",
 };

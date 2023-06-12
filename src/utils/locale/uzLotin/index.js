@@ -13,4 +13,12 @@ export let uzLotin = {
   settings: "Sozlamalar",
   change_language: "Tilni o'zgartirish",
   log_out: "Tark etish",
+  ordinary_rooms_title: "Oddiy xonalar",
+  "2 Building": "2 Bino",
+  "4 Building": "4 Bino",
+  "6 Building": "6 Bino",
+  setting_modal_title: "Profil",
+  setting_modal_name: "Ism:",
+  setting_modal_surname: "Familiya:",
+  locale_modal_title: "Tilni o'zgartirish",
 };

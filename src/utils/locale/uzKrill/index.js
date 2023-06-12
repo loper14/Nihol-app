@@ -13,4 +13,12 @@ export let uzKrill = {
   settings: "Созламалар",
   change_language: "Тилни ўзгартириш",
   log_out: "Тарк этиш",
+  ordinary_rooms_title: "Оддий хоналар",
+  "2 Building": "2 Бино",
+  "4 Building": "4 Бино",
+  "6 Building": "6 Бино",
+  setting_modal_title: "Профил",
+  setting_modal_name: "Исм:",
+  setting_modal_surname: "Фамилия:",
+  locale_modal_title: "Тилни ўзгартириш",
 };

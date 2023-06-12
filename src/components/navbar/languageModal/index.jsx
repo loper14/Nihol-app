@@ -5,11 +5,13 @@ import { switchLocaleModal } from "../../../redux/modalSlices";
 import { Wrapper } from "./style";
 import i18next, { changeLanguage } from "i18next";
 import { changeLang } from "../../../redux/localeSlice";
+import { useTranslation } from "react-i18next";
 
 const LanguageModal = () => {
   let dispatch = useDispatch();
   let { localeModalVisibility } = useSelector((state) => state.modal);
   let { lang } = useSelector((state) => state.locale);
+  let { t } = useTranslation();
 
   let alterlanguage = () => {
     dispatch(switchLocaleModal());
@@ -18,7 +20,7 @@ const LanguageModal = () => {
 
   return (
     <Modal
-      title="Change language"
+      title={t("locale_modal_title")}
       open={localeModalVisibility}
       onOk={() => alterlanguage()}
       onCancel={() => dispatch(switchLocaleModal())}
