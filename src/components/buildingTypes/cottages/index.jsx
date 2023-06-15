@@ -1,10 +1,12 @@
 import React from "react";
 import TitleHandler from "../../../generic/Title";
+import { useTranslation } from "react-i18next";
 
 const Cottages = () => {
+  let { t } = useTranslation();
   return (
     <>
-      <TitleHandler title="Luxury Rooms" />
+      <TitleHandler title={t("cottages_title")} />
     </>
   );
 };

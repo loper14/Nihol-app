@@ -1,11 +1,11 @@
 import React from "react";
 import Card from "../../generic/card";
-import { Wrapper } from "./style";
 import styled from "styled-components";
 import TitleHandler from "../../generic/Title";
 import { emptyPlaceCardData } from "../../mock/cardData";
 import { Outlet, useLocation, useNavigate, useOutlet } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import { CardWrapper } from "../../generic/style/style";
 
 export let Img = styled.img``;
 
@@ -17,7 +17,7 @@ const EmptyPlaces = () => {
   return !hasOutlet ? (
     <>
       <TitleHandler title={t("building_types")} />
-      <Wrapper>
+      <CardWrapper>
         {emptyPlaceCardData.map(({ title, icon, path }, index) => (
           <Card
             key={index}
@@ -26,7 +26,7 @@ const EmptyPlaces = () => {
             onClick={() => navigate(`${pathname}${path}`)}
           />
         ))}
-      </Wrapper>
+      </CardWrapper>
     </>
   ) : (
     <Outlet />

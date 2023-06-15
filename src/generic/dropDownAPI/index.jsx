@@ -5,9 +5,30 @@ import {
   TranslationOutlined,
   LogoutOutlined,
 } from "@ant-design/icons";
+import { useSignOut } from "react-auth-kit";
+import { ExclamationCircleFilled } from "@ant-design/icons";
+import { Modal } from "antd";
+import { useNavigate } from "react-router-dom";
+let { confirm } = Modal;
 
 export const useDropDownAPI = () => {
   let { t } = useTranslation();
+  let signOut = useSignOut();
+  let navigate = useNavigate();
+
+  let handleLogout = () => {
+    confirm({
+      title: "Warning!",
+      icon: <ExclamationCircleFilled />,
+      content: "Are you sure you want to log out?",
+      onOk() {
+        signOut();
+        navigate("/login");
+      },
+      onCancel() {},
+    });
+  };
+
   return {
     navbarDropDown: ({ profileClickHandler, localeClickHandler }) => {
       return [
@@ -32,7 +53,10 @@ export const useDropDownAPI = () => {
         },
         {
           label: (
-            <DropDownItem style={{ color: "red" }}>
+            <DropDownItem
+              onClick={() => handleLogout()}
+              style={{ color: "red" }}
+            >
               <LogoutOutlined style={{ fontSize: "18px" }} />
               {t("log_out")}
             </DropDownItem>

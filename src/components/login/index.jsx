@@ -5,23 +5,24 @@ import UseNotificationAPI from "../../generic/NotificationAPI";
 import useAxios from "../../hooks";
 import { useSignIn } from "react-auth-kit";
 import { useNavigate } from "react-router-dom";
+import useInput from "../../generic/InputAPI";
 
 const Login = () => {
   let [loading, setLoading] = useState(false);
-  let phoneNumber = useRef();
+  const [phoneNumber, setPhoneNumber] = useState("");
   let password = useRef();
   let notifier = UseNotificationAPI();
   let axios = useAxios();
   let signIn = useSignIn();
   let navigate = useNavigate();
+  let { phoneFormatter } = useInput();
 
   let onAuth = () => {
     if (loading) return;
-    if (!phoneNumber.current.input.value || !password.current.input.value)
-      return notifier("empty");
+    if (!phoneNumber || !password.current.input.value) return notifier("empty");
 
     let userData = {
-      phoneNumber: `+998${phoneNumber.current.input.value}`,
+      phoneNumber: `+998${phoneNumber.replace(/[^\d]/g, "")}`,
       password: password.current.input.value,
     };
     setLoading(true);
@@ -59,10 +60,11 @@ const Login = () => {
           Biz har kuni kechagidan ko'ra yaxshiroq xizmat ko'rsatishga intilamiz.
         </Wrapper.Text>
         <Wrapper.Input
-          ref={phoneNumber}
           name="phoneNumber"
           bordered={false}
           addonBefore="+998"
+          value={phoneNumber}
+          onChange={(e) => setPhoneNumber(phoneFormatter(e.target.value))}
         />
         <Wrapper.InputPassword
           ref={password}

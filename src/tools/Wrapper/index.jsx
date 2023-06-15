@@ -1,25 +1,30 @@
 import { ConfigProvider } from "antd";
-import { Provider, useSelector } from "react-redux";
+import { Provider } from "react-redux";
 import { BrowserRouter } from "react-router-dom";
-import ru_RU from "antd/locale/ru_RU";
 import en_US from "antd/locale/en_US";
 import store from "../../redux";
 import { AuthProvider } from "react-auth-kit";
+import { QueryClient, QueryClientProvider } from "react-query";
+import { ReactQueryDevtools } from "react-query/devtools";
 
 const Wrapper = ({ children }) => {
+  let queryClient = new QueryClient();
   return (
-    <AuthProvider
-      authType={"cookie"}
-      authName={"_auth"}
-      cookieDomain={window.location.hostname}
-      cookieSecure={window.location.protocol === "https:"}
-    >
-      <Provider store={store}>
-        <BrowserRouter>
-          <ConfigProvider locale={en_US}>{children}</ConfigProvider>
-        </BrowserRouter>
-      </Provider>
-    </AuthProvider>
+    <Provider store={store}>
+      <BrowserRouter>
+        <QueryClientProvider client={queryClient}>
+          <ReactQueryDevtools />
+          <AuthProvider
+            authType={"cookie"}
+            authName={"_auth"}
+            cookieDomain={window.location.hostname}
+            cookieSecure={window.location.protocol === "https:"}
+          >
+            <ConfigProvider locale={en_US}>{children}</ConfigProvider>
+          </AuthProvider>
+        </QueryClientProvider>
+      </BrowserRouter>
+    </Provider>
   );
 };
 
