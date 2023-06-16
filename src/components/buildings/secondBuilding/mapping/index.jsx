@@ -1,5 +1,5 @@
 import { useTranslation } from "react-i18next";
-import { Wrapper } from "../../secondBuilding/style";
+import { Wrapper } from "../style";
 import { useQueryClient } from "react-query";
 
 const Mapping = () => {

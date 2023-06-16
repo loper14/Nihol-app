@@ -5,6 +5,7 @@ import emptyPlace from "../assets/imgs/empty_place.svg";
 import ordinaryRoom from "../assets/imgs/ordinary_room.svg";
 import luxuryRoom from "../assets/imgs/luxury_room.svg";
 import cottages from "../assets/imgs/mansion.svg";
+import room from "../assets/imgs/room.svg";
 
 export let cardData = [
   {
@@ -48,17 +49,17 @@ export let emptyPlaceCardData = [
 export let ordinaryRoomsCardData = [
   {
     title: "2 Building",
-    icon: ordinaryRoom,
+    icon: room,
     path: "/2",
   },
   {
     title: "4 Building",
-    icon: ordinaryRoom,
+    icon: room,
     path: "/4",
   },
   {
     title: "6 Building",
-    icon: ordinaryRoom,
+    icon: room,
     path: "/6",
   },
 ];

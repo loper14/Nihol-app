@@ -18,9 +18,9 @@ export const useDropDownAPI = () => {
 
   let handleLogout = () => {
     confirm({
-      title: "Warning!",
+      title: t("warning"),
       icon: <ExclamationCircleFilled />,
-      content: "Are you sure you want to log out?",
+      content: t("sign_out_text"),
       onOk() {
         signOut();
         navigate("/login");

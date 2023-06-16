@@ -26,4 +26,6 @@ export let en = {
   setting_modal_surname: "Surname:",
   locale_modal_title: "Change Language",
   room: "Room",
+  warning: "Warning",
+  sign_out_text: "Are you sure? ",
 };

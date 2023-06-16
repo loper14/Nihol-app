@@ -26,4 +26,6 @@ export let uzKrill = {
   setting_modal_surname: "Фамилия:",
   locale_modal_title: "Тилни ўзгартириш",
   room: " Хона",
+  warning: "Тасдиқланг",
+  sign_out_text: "Ҳақиқатан ҳам тарк етишни хоҳлайсизми?",
 };

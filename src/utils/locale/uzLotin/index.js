@@ -26,4 +26,6 @@ export let uzLotin = {
   setting_modal_surname: "Familiya:",
   locale_modal_title: "Tilni o'zgartirish",
   room: " Xona",
+  warning: "Tasdiqlang",
+  sign_out_text: "Haqiqatan ham tark etishni xohlaysizmi?",
 };

@@ -26,4 +26,6 @@ export let ru = {
   setting_modal_surname: "Фамилия:",
   locale_modal_title: "Изменить язык",
   room: "Комната",
+  warning: "Предупреждение",
+  sign_out_text: "Вы уверены?",
 };

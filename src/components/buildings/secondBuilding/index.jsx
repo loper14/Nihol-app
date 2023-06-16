@@ -1,5 +1,5 @@
 import TitleHandler from "../../../generic/Title";
-import Mapping from "../fourthBuilding/mapping";
+import Mapping from "./mapping";
 import { Wrapper } from "./style";
 import useAxios from "../../../hooks";
 import { Spin } from "antd";

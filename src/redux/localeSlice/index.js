@@ -3,7 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 export let localeSlice = createSlice({
   name: "localeSlice",
   initialState: {
-    lang: "uzKrill",
+    lang: "uzLotin",
   },
   reducers: {
     changeLang(state, { payload }) {
