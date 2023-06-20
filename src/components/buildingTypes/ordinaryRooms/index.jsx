@@ -1,4 +1,3 @@
-import React from "react";
 import TitleHandler from "../../../generic/Title";
 import { ordinaryRoomsCardData } from "../../../mock/cardData";
 import Card from "../../../generic/card";

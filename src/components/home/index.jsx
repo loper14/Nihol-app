@@ -1,4 +1,3 @@
-import React from "react";
 import { Wrapper } from "./style";
 import Card from "../../generic/card";
 import { cardData } from "../../mock/cardData";

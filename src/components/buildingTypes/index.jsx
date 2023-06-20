@@ -1,4 +1,3 @@
-import React from "react";
 import Card from "../../generic/card";
 import styled from "styled-components";
 import TitleHandler from "../../generic/Title";

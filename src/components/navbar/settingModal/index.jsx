@@ -1,7 +1,7 @@
 import { useDispatch, useSelector } from "react-redux";
 import { Avatar, Input, Modal } from "antd";
 import { SettingText, VersionText } from "./style";
-import { switchProfileModal } from "../../../redux/modalSlices";
+import { switchProfileModal } from "../../../redux/modalSlice";
 import { useTranslation } from "react-i18next";
 
 const SettingModal = () => {
@@ -16,6 +16,8 @@ const SettingModal = () => {
       onOk={() => dispatch(switchProfileModal())}
       onCancel={() => dispatch(switchProfileModal())}
       okButtonProps={{ disabled: true }}
+      okText={t("save_btn")}
+      cancelText={t("cancel_btn")}
     >
       <Avatar
         style={{

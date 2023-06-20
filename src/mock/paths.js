@@ -45,11 +45,6 @@ export let paths = [
         element: <OrdinaryRooms />,
         children: [
           {
-            id: "4-1-2",
-            path: "3",
-            element: <ThirdBuilding />,
-          },
-          {
             id: "4-1-1",
             path: "2",
             element: <SecondBuilding />,

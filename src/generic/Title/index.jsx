@@ -1,4 +1,3 @@
-import React from "react";
 import { Title } from "../style/style";
 import styled from "styled-components";
 import { useNavigate } from "react-router-dom";

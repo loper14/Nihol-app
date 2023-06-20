@@ -1,4 +1,3 @@
-import React from "react";
 import { Wrapper } from "./style";
 
 const Card = ({ title, icon, onClick }) => {

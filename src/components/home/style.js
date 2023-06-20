@@ -5,7 +5,7 @@ export let Wrapper = styled.div`
   grid-template-columns: auto auto;
   width: 700px;
   grid-row-gap: 50px;
-  grid-column-gap: 80px;
+  grid-column-gap: 150px;
   margin: 0 auto;
   margin-bottom: 30px;
   align-items: center;

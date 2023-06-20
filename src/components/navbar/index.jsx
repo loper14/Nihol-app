@@ -4,7 +4,7 @@ import { useDropDownAPI } from "../../generic/dropDownAPI";
 import SettingModal from "./settingModal";
 import LanguageModal from "./languageModal";
 import { useDispatch } from "react-redux";
-import { switchLocaleModal, switchProfileModal } from "../../redux/modalSlices";
+import { switchLocaleModal, switchProfileModal } from "../../redux/modalSlice";
 import { Outlet, useNavigate } from "react-router-dom";
 import { useAuthUser } from "react-auth-kit";
 const Navbar = () => {

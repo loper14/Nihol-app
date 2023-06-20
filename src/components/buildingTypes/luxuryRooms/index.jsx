@@ -1,4 +1,3 @@
-import React from "react";
 import TitleHandler from "../../../generic/Title";
 import Card from "../../../generic/card";
 import room from "../../../assets/imgs/room.svg";

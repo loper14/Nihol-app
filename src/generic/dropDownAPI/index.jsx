@@ -26,6 +26,9 @@ export const useDropDownAPI = () => {
         navigate("/login");
       },
       onCancel() {},
+      okText: t("logout_btn"),
+      cancelText: t("cancel_btn"),
+      okButtonProps: { danger: true },
     });
   };
 

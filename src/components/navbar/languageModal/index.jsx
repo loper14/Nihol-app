@@ -1,7 +1,6 @@
 import { Avatar, Modal, Segmented } from "antd";
-import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { switchLocaleModal } from "../../../redux/modalSlices";
+import { switchLocaleModal } from "../../../redux/modalSlice";
 import { Wrapper } from "./style";
 import i18next from "i18next";
 import { changeLang } from "../../../redux/localeSlice";
@@ -24,7 +23,8 @@ const LanguageModal = () => {
       open={localeModalVisibility}
       onOk={() => alterlanguage()}
       onCancel={() => dispatch(switchLocaleModal())}
-      okText="Switch"
+      okText={t("switch_btn")}
+      cancelText={t("cancel_btn")}
     >
       <Segmented
         defaultValue={lang}

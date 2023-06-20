@@ -77,3 +77,17 @@ Wrapper.Room = styled(Tag)`
   height: 40px;
   border-radius: 12px;
 `;
+Wrapper.InfoRoom = styled(Tag)`
+  cursor: pointer;
+  display: flex;
+  -moz-box-pack: center;
+  justify-content: center;
+  -moz-box-align: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  position: absolute;
+  top: -8px;
+  right: -15px;
+`;
