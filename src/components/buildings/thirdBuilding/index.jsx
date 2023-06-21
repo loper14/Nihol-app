@@ -4,6 +4,7 @@ import { useTranslation } from "react-i18next";
 import Mapping from "./mapping";
 import { Spin } from "antd";
 import useQueryHandler from "../../../hooks/useQuery";
+import UserModal from "../common/userModal";
 
 const ThirdBuilding = () => {
   let { t } = useTranslation();
@@ -14,6 +15,7 @@ const ThirdBuilding = () => {
 
   return (
     <Wrapper>
+      <UserModal />
       <TitleHandler title={t("3 Building")} />
       {isLoading ? <Spin /> : <Mapping />}
     </Wrapper>

@@ -25,6 +25,7 @@ Wrapper.Img = styled.img`
 `;
 Wrapper.Title = styled.div`
   font-weight: 700;
+  font-size: 18px;
 `;
 Wrapper.Avatar = styled(Avatar)`
   cursor: pointer;

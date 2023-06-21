@@ -44,7 +44,7 @@ export let uzKrill = {
   address: "Адрес:",
   came_date: "Ташриф санаси:",
   end_date: "Тугаш санаси:",
-  ramaining_days: "Қолган кун:",
+  remaining_days: "Қолган кун:",
   daily_price: "Кунлик нарх:",
   total_price: "Жами тўлов:",
   voucher_status: "Воучер холати:",

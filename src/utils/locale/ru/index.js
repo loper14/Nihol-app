@@ -44,7 +44,7 @@ export let ru = {
   address: "Адрес:",
   came_date: "Дата посещения:",
   end_date: "Дата окончания:",
-  ramaining_days: "Оставшиеся дни:",
+  remaining_days: "Оставшиеся дни:",
   daily_price: "Ежедневная цена:",
   total_price: "Итоговая цена:",
   voucher_status: "Статус путевки:",

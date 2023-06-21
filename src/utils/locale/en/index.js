@@ -44,7 +44,7 @@ export let en = {
   address: "Address:",
   came_date: "Came date:",
   end_date: "End date:",
-  ramaining_days: "Remaining days:",
+  remaining_days: "Remaining days:",
   daily_price: "Daily price:",
   total_price: "Total price:",
   voucher_status: "Voucher status:",

@@ -44,7 +44,7 @@ export let uzLotin = {
   address: "Adress:",
   came_date: "Tashrif sanasi:",
   end_date: "Tugash sanasi:",
-  ramaining_days: "Qolgan kun:",
+  remaining_days: "Qolgan kun:",
   daily_price: "Kunlik narx:",
   total_price: "Jami to'lov:",
   voucher_status: "Vouchyer xolati:",

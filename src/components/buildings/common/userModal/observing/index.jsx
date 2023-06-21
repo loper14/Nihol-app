@@ -21,7 +21,6 @@ const Observing = () => {
     total,
     paidByCash,
     paidByPlasticCard,
-    buildingNumber,
     roomNumber,
   } = selectedUser.userData;
 
