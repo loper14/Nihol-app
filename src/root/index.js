@@ -10,6 +10,7 @@ import { ru } from "../utils/locale/ru";
 import { uzLotin } from "../utils/locale/uzLotin";
 import { uzKrill } from "../utils/locale/uzKrill";
 import { useSelector } from "react-redux";
+import NotFound from "../components/404";
 
 const Root = () => {
   let { lang } = useSelector((state) => state.locale);
@@ -56,6 +57,7 @@ const Root = () => {
         })}
       </Route>
       <Route path="/login" element={<Login />} />
+      <Route path="*" element={<NotFound />} />
     </Routes>
   );
 };
