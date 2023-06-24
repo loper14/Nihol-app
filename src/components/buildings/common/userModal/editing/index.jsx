@@ -30,10 +30,7 @@ const Editing = () => {
           passportNumber: userData.passportID,
           phoneNumber: userData.phoneNumber,
           address: userData.address,
-          // dateRange: [
-          //   dayjs(userData.arrivalDate, "YYYY-MM-DD"),
-          //   dayjs("2015-06-06", "YYYY-MM-DD"),
-          // ],
+          dateRange: [dayjs(+userData.arrivalDate), dayjs(+userData.endDate)],
           dailyPrice: userData.dayCost,
           payByCash: userData.paidByCash,
           payByCard: userData.paidByPlasticCard,
@@ -103,7 +100,7 @@ const Editing = () => {
           <Input />
         </Form.Item>
         <Form.Item
-          label={t("data_range")}
+          label={t("date_range")}
           name="dateRange"
           rules={[
             {

@@ -6,9 +6,11 @@ import Observing from "./observing";
 import Booking from "./booking";
 import Editing from "./editing";
 import { useTranslation } from "react-i18next";
+import UserEmptyUI from "./emptyUI/userEmptyUI";
 
 const UserModal = () => {
   let { userModalVisibility } = useSelector((state) => state.modal);
+  let { selectedUser } = useSelector((state) => state.user);
   let { t } = useTranslation();
   let [segmentedOption, setSegmentedOption] = useState(t("observing"));
   let dispatch = useDispatch();
@@ -26,11 +28,17 @@ const UserModal = () => {
         style={{ marginBottom: "30px" }}
       />
       {segmentedOption === t("observing") ? (
-        <Observing />
+        selectedUser?.clienteValue?.userID ? (
+          <Observing />
+        ) : (
+          <UserEmptyUI />
+        )
       ) : segmentedOption === t("booked_places") ? (
         <Booking />
-      ) : (
+      ) : selectedUser?.clienteValue?.userID ? (
         <Editing />
+      ) : (
+        <UserEmptyUI />
       )}
     </Modal>
   );

@@ -17,7 +17,10 @@ const Mapping = () => {
     ) : !clienteValue.isBooked ? (
       <EmptyRoom key={clienteValue.clienteID} />
     ) : (
-      <BookedRoom key={clienteValue.clienteID} />
+      <BookedRoom
+        values={{ clienteValue, roomValue }}
+        key={clienteValue.clienteID}
+      />
     );
   };
 

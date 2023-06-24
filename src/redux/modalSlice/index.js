@@ -6,6 +6,8 @@ export let modalSlice = createSlice({
     profileModalVisibility: false,
     localeModalVisibility: false,
     userModalVisibility: false,
+    addUserModalVisibility: false,
+    bookingUserAddModalVisibility: false,
   },
   reducers: {
     switchProfileModal(state) {
@@ -17,8 +19,20 @@ export let modalSlice = createSlice({
     switchUserModal(state) {
       state.userModalVisibility = !state.userModalVisibility;
     },
+    switchAddUserModal(state) {
+      state.addUserModalVisibility = !state.addUserModalVisibility;
+    },
+    switchBookingUserAddModal(state) {
+      state.bookingUserAddModalVisibility =
+        !state.bookingUserAddModalVisibility;
+    },
   },
 });
-export let { switchProfileModal, switchLocaleModal, switchUserModal } =
-  modalSlice.actions;
+export let {
+  switchProfileModal,
+  switchLocaleModal,
+  switchUserModal,
+  switchAddUserModal,
+  switchBookingUserAddModal,
+} = modalSlice.actions;
 export default modalSlice.reducer;

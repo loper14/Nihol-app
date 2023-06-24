@@ -5,6 +5,8 @@ import { Spin } from "antd";
 import { useTranslation } from "react-i18next";
 import useQueryHandler from "../../../hooks/useQuery";
 import UserModal from "../common/userModal";
+import Adding from "../common/actions/adding/user";
+import BookingUser from "../common/actions/adding/bookingUser";
 
 const SecondBuilding = () => {
   let { t } = useTranslation();
@@ -16,7 +18,8 @@ const SecondBuilding = () => {
   return (
     <Wrapper>
       <UserModal />
-      <TitleHandler title={t("2 Building")} />
+      <Adding />
+      <BookingUser /> <TitleHandler title={t("2 Building")} />
       {isLoading ? <Spin /> : <Mapping />}
     </Wrapper>
   );
