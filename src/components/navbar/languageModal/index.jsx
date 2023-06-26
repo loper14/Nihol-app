@@ -52,7 +52,7 @@ const LanguageModal = () => {
             label: (
               <Wrapper>
                 <Avatar src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Flag_of_Uzbekistan.svg/255px-Flag_of_Uzbekistan.svg.png" />
-                <div>O'zbek (lotin) </div>
+                <div>O'zbek</div>
               </Wrapper>
             ),
             value: "uzLotin",
@@ -61,7 +61,7 @@ const LanguageModal = () => {
             label: (
               <Wrapper>
                 <Avatar src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Flag_of_Uzbekistan.svg/255px-Flag_of_Uzbekistan.svg.png" />
-                <div>Узбек (krill)</div>
+                <div>Узбек</div>
               </Wrapper>
             ),
             value: "uzKrill",

@@ -19,7 +19,8 @@ const SecondBuilding = () => {
     <Wrapper>
       <UserModal />
       <Adding />
-      <BookingUser /> <TitleHandler title={t("2 Building")} />
+      <BookingUser />
+      <TitleHandler title={t("2 Building")} />
       {isLoading ? <Spin /> : <Mapping />}
     </Wrapper>
   );
