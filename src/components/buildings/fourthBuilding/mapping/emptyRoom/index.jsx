@@ -5,17 +5,18 @@ import {
   switchBookingUserAddModal,
 } from "../../../../../redux/modalSlice";
 import { Wrapper } from "../../../secondBuilding/style";
+import { useTranslation } from "react-i18next";
 
 const EmptyRoom = () => {
   let { confirm } = Modal;
   let dispatch = useDispatch();
+  let { t } = useTranslation();
   let clickHandler = () => {
     return confirm({
-      title: "Empty place",
-      content:
-        "This place is empty. Click the «Add» button to add a new user. Or click to the «Book» button to book this place.",
-      okText: "Add",
-      cancelText: "Book",
+      title: t("warning_title"),
+      content: t("warning_description"),
+      okText: t("add_btn"),
+      cancelText: t("book_btn"),
       closable: true,
       onOk: () => {
         dispatch(switchAddUserModal());
