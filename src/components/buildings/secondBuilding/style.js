@@ -15,10 +15,12 @@ Wrapper.MainCardWrapper = styled.div`
   -webkit-box-pack: center;
   justify-content: center;
   gap: 10px;
+  @media (max-width: 700px) {
+    width: 340px;
+  }
 `;
 Wrapper.CardWrapper = styled.div`
   display: flex;
-  /* width: 290px; */
   -moz-box-align: center;
   align-items: center;
   gap: 20px;

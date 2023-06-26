@@ -31,6 +31,7 @@ export let CardWrapper = styled.div`
   -ms-grid-row-align: center;
   grid-column-gap: 150px;
   grid-row-gap: 50px;
+  padding-bottom: 30px;
   margin: auto;
   @media (max-width: 700px) {
     width: 550px;
