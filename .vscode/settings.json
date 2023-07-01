@@ -1,7 +1,7 @@
 {
   "editor.fontFamily": "Consolas, 'Courier New', monospace",
   "editor.renderWhitespace": "selection",
-  "editor.cursorStyle": "block-outline",
+  "editor.cursorStyle": "line",
   "editor.wordWrap": "off",
   "editor.accessibilityPageSize": 20,
   "editor.bracketPairColorization.independentColorPoolPerBracketType": false,

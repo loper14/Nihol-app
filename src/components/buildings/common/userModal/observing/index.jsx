@@ -4,8 +4,10 @@ import dayjs from "dayjs";
 import { Button } from "antd";
 import { useTranslation } from "react-i18next";
 import { switchUserModal } from "../../../../../redux/modalSlice";
+import { useQueryClient } from "react-query";
 
 const Observing = () => {
+  let queryClient = useQueryClient();
   let { selectedUser } = useSelector((state) => state.user);
   let dispatch = useDispatch();
   let { t } = useTranslation();
@@ -22,7 +24,7 @@ const Observing = () => {
     paidByCash,
     paidByPlasticCard,
     roomNumber,
-  } = selectedUser.userData;
+  } = queryClient.getQueryData(`user/${selectedUser.userData._id}`);
 
   return (
     <Wrapper>

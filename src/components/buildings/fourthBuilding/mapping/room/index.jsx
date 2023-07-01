@@ -14,7 +14,7 @@ const Room = ({ values }) => {
   let { clienteValue } = values;
   let { isLoading, data } = useQueryHandler({
     url: `/accomodation/4/user?_id=${clienteValue.userID}`,
-    queryKey: `user${clienteValue.userID}`,
+    queryKey: `user/${clienteValue.userID}`,
   });
 
   let clickHandler = () => {
@@ -29,11 +29,13 @@ const Room = ({ values }) => {
 
   return (
     <Wrapper.Room color="red" onClick={() => clickHandler()}>
-      <Tooltip title={t("booked_text")}>
-        <Wrapper.InfoRoom color="yellow">
-          <InfoCircleOutlined color="yellow" />
-        </Wrapper.InfoRoom>
-      </Tooltip>
+      {clienteValue.isBooked && (
+        <Tooltip title={t("booked_text")}>
+          <Wrapper.InfoRoom color="yellow">
+            <InfoCircleOutlined color="yellow" />
+          </Wrapper.InfoRoom>
+        </Tooltip>
+      )}
       {isLoading ? (
         <LoadingOutlined />
       ) : (
