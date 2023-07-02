@@ -13,7 +13,7 @@ const NotFound = () => {
           <>
             <Wrapper.NotFound>404</Wrapper.NotFound>
             <Wrapper.NotFoundText>
-              Kechirasz, siz tashrif buyurgan sayt mavjud emas.
+              Kechirasiz, siz tashrif buyurgan sayt mavjud emas.
             </Wrapper.NotFoundText>
             <Button type="primary" onClick={() => navigate("/")}>
               Asosiy bo'lim

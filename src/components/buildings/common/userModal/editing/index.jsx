@@ -6,6 +6,7 @@ import { useTranslation } from "react-i18next";
 import { switchUserModal } from "../../../../../redux/modalSlice";
 import { useUpdateUser } from "../../../../../hooks/useQuery/useQueryActions";
 import { useQueryClient } from "react-query";
+import UseNotificationAPI from "../../../../../generic/NotificationAPI";
 
 const Editing = () => {
   let { RangePicker } = DatePicker;
@@ -15,6 +16,7 @@ const Editing = () => {
   let dispatch = useDispatch();
   let { t } = useTranslation();
   let { mutate } = useUpdateUser();
+  let notifier = UseNotificationAPI();
 
   let onFinish = (e) => {
     let shouldUpdate = {
@@ -26,6 +28,7 @@ const Editing = () => {
     delete shouldUpdate.dateRange;
     mutate({ shouldUpdate });
   };
+  console.log(userData);
 
   return (
     <Form
@@ -43,13 +46,13 @@ const Editing = () => {
       initialValues={{
         fullName: userData.fullName,
         birthDate: dayjs(+userData.birthDate),
-        passportNumber: userData.passportID,
+        passportID: userData.passportID,
         phoneNumber: userData.phoneNumber,
         address: userData.address,
         dateRange: [dayjs(+userData.arrivalDate), dayjs(+userData.endDate)],
-        dailyPrice: userData.dayCost,
-        payByCash: userData.paidByCash,
-        payByCard: userData.paidByPlasticCard,
+        dayCost: userData.dayCost,
+        paidByCash: userData.paidByCash,
+        paidByPlasticCard: userData.paidByPlasticCard,
       }}
       autoComplete="off"
       layout="vertical"
@@ -81,7 +84,7 @@ const Editing = () => {
       </Form.Item>
       <Form.Item
         label={t("passport_number")}
-        name="passportNumber"
+        name="passportID"
         rules={[
           {
             required: true,
@@ -129,7 +132,7 @@ const Editing = () => {
       </Form.Item>
       <Form.Item
         label={t("daily_price")}
-        name="dailyPrice"
+        name="dayCost"
         rules={[
           {
             required: true,
@@ -141,7 +144,7 @@ const Editing = () => {
       </Form.Item>
       <Form.Item
         label={t("pay_by_cash")}
-        name="payByCash"
+        name="paidByCash"
         rules={[
           {
             required: true,
@@ -153,7 +156,7 @@ const Editing = () => {
       </Form.Item>
       <Form.Item
         label={t("pay_by_card")}
-        name="payByCard"
+        name="paidByPlasticCard"
         rules={[
           {
             required: true,
@@ -168,7 +171,7 @@ const Editing = () => {
           {t("cancel_btn")}
         </Button>
         <Button
-          onClick={() => dispatch(switchUserModal())}
+          onClick={() => notifier("saved")}
           htmlType="submit"
           type="primary"
         >

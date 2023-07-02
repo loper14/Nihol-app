@@ -14,7 +14,7 @@ const Room = ({ values }) => {
   let { clienteValue } = values;
   let { isLoading, data } = useQueryHandler({
     url: `/accomodation/3/user?_id=${clienteValue.userID}`,
-    queryKey: `user${clienteValue.userID}`,
+    queryKey: `user/${clienteValue.userID}`,
   });
 
   let clickHandler = () => {

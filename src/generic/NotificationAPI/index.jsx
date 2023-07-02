@@ -14,6 +14,10 @@ let notifier = (status) => {
       return notification.warning({
         message: "Please fill all the fields!",
       });
+    case "saved":
+      return notification.success({
+        message: "Saved!",
+      });
     default:
       return;
   }
